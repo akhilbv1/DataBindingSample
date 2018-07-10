@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.design.chip.ChipGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:chipSpacing="5dp"
+        app:chipSpacingHorizontal="5dp"
+        app:chipSpacingVertical="5dp"
+        app:singleLine="false"
+        app:singleSelection="false">
+
+        <android.support.design.chip.Chip
+            android:id="@+id/chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            app:chipBackgroundColor="@color/gray"
+            tools:chipText="asdasd" />
+    </android.support.design.chip.ChipGroup>
+    <!--<com.robertlevonyan.views.chip.Chip
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:mcv_selectedBackgroundColor="@color/colorPrimary"
+         />-->
+</LinearLayout>

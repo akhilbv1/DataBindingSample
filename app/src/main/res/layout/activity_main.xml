@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="user"
+            type="sample.android.com.databindingsample.User" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="sample.android.com.databindingsample.MainActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.username}"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.userPhoneNumber}"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.userDetails}"
+            android:visibility="gone" />
+
+
+        <!--   <android.support.v7.widget.RecyclerView
+               android:id="@+id/rec"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               tools:listitem="@layout/item_chips"
+               android:visibility="visible"/>-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+        </android.support.v4.view.ViewPager>
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-7dp"
+            android:gravity="center"
+            app:piv_animationType="drop"
+            app:piv_dynamicCount="true"
+            app:piv_radius="4dp"
+            app:piv_selectedColor="@color/colorPrimary"
+            app:piv_unselectedColor="@android:color/black" />
+    </LinearLayout>
+</layout>
